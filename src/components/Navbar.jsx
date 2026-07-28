@@ -3,10 +3,10 @@ import Link from 'next/link';
 const Navbar = () => {
   const navLinks = [
     { title: 'Inicio', path: '/' },
-    { title: 'Sobre mí', path: '/sobre-mi' },
-    { title: 'Proyectos', path: '/proyectos' },
-    { title: 'Habilidades', path: '/habilidades' },
-    { title: 'Contacto', path: '/contacto' },
+    { title: 'Sobre mí', path: '/src/components/About.jsx' },
+    { title: 'Proyectos', path: '/src/components/Projects.jsx' },
+    { title: 'Habilidades', path: '/src/components/Skills.jsx' },
+    { title: 'Contacto', path: '/src/components/Contact.jsx' },
   ];
 
   return (
@@ -16,7 +16,7 @@ const Navbar = () => {
         {/* LOGO SECCIÓN */}
         <Link href="/" className="group flex items-center gap-1.5 focus:outline-none">
           <span className="text-3xl md:text-4xl font-extrabold tracking-tight group-hover:text-gray-200 transition-colors duration-300">
-            Portafolio
+            Mi Portafolio
           </span>
           {/* EL PUNTO PÚRPURA */}
           <div className="w-4 h-4 bg-[#6A0DAD] rounded-full mt-2.5 
