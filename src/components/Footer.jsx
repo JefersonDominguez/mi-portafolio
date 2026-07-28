@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebookF, FaTwitter, FaInstagram, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa';
+import { FaFacebookF, FaGithub, FaLinkedinIn, FaWhatsapp } from 'react-icons/fa';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -16,9 +16,9 @@ export default function Footer() {
       label: 'Facebook' 
     },
     { 
-      icon: FaInstagram, 
-      href: 'https://www.instagram.com/jeferson_dominguez1?igsh=djdqdXRlZHRncmF3', 
-      label: 'Instagram' 
+      icon: FaGithub, 
+      href: 'https://github.com/JefersonDominguez', 
+      label: 'GitHub' 
     },
     { 
       icon: FaLinkedinIn, 
