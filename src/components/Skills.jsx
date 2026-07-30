@@ -1,5 +1,4 @@
 import React from 'react';
-// Asegúrate de instalar react-icons si aún no lo tienes: npm i react-icons
 import { 
   FaHtml5, 
   FaCss3Alt, 
@@ -31,7 +30,8 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section className="bg-[#0e0e11] py-16 px-4 flex justify-center items-center min-h-screen">
+    // SE AGREGÓ EL ID "skills" Y scroll-mt-20 PARA EL OFFSET DEL NAVBAR
+    <section id="skills" className="bg-[#0e0e11] py-16 px-4 flex justify-center items-center min-h-screen scroll-mt-20">
       <div className="max-w-6xl w-full">
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4">
           {skills.map((skill, index) => {
