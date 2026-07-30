@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { FiMapPin, FiMail, FiPhone } from 'react-icons/fi';
+import emailjs from '@emailjs/browser';
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -9,6 +10,9 @@ export default function Contact() {
     email: '',
     mensaje: '',
   });
+
+  const [loading, setLoading] = useState(false);
+  const [statusMessage, setStatusMessage] = useState({ type: '', text: '' });
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -20,10 +24,39 @@ export default function Contact() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aquí puedes agregar la lógica para enviar el formulario (EmailJS, Formspree, etc.)
-    console.log('Formulario enviado:', formData);
-    alert('¡Mensaje enviado con éxito!');
-    setFormData({ nombre: '', email: '', mensaje: '' });
+    setLoading(true);
+    setStatusMessage({ type: '', text: '' });
+
+    // Tus credenciales configuradas
+    const SERVICE_ID = 'service_tpfcts6';
+    const TEMPLATE_ID = 'template_ep2rq5e';
+    const PUBLIC_KEY = 'zsuKekdRQQWUWM_BN';
+
+    const templateParams = {
+      nombre: formData.nombre,
+      email: formData.email,
+      mensaje: formData.mensaje,
+    };
+
+    emailjs
+      .send(SERVICE_ID, TEMPLATE_ID, templateParams, PUBLIC_KEY)
+      .then(() => {
+        setStatusMessage({
+          type: 'success',
+          text: 'MENSAJE ENVIADO, MUCHAS GRACIAS!',
+        });
+        setFormData({ nombre: '', email: '', mensaje: '' });
+      })
+      .catch((error) => {
+        console.error('Error al enviar EmailJS:', error);
+        setStatusMessage({
+          type: 'error',
+          text: 'INTENTE DE NUEVO MÁS TARDE O CONTÁCTAME EN MI NÚMERO DE TELÉFONO',
+        });
+      })
+      .finally(() => {
+        setLoading(false);
+      });
   };
 
   return (
@@ -74,7 +107,7 @@ export default function Contact() {
               <div>
                 <h3 className="font-bold text-base text-white">Teléfono</h3>
                 <a 
-                  href="tel:+51932520417" 
+                  href="tel:+51944755979" 
                   className="text-gray-300 text-sm mt-0.5 hover:text-[#c084fc] transition-colors block"
                 >
                   +51 944 755 979
@@ -136,13 +169,27 @@ export default function Contact() {
               ></textarea>
             </div>
 
+            {/* MENSAJE DE ESTADO (ÉXITO / ERROR) */}
+            {statusMessage.text && (
+              <div
+                className={`p-4 rounded-lg text-sm font-semibold text-center transition-all ${
+                  statusMessage.type === 'success'
+                    ? 'bg-green-500/10 border border-green-500/50 text-green-400'
+                    : 'bg-red-500/10 border border-red-500/50 text-red-400'
+                }`}
+              >
+                {statusMessage.text}
+              </div>
+            )}
+
             {/* BOTÓN ENVIAR */}
             <div>
               <button
                 type="submit"
-                className="px-8 py-3 border border-[#a855f7]/70 rounded-lg text-[#c084fc] font-medium text-sm bg-[#121216] hover:bg-[#a855f7]/10 hover:border-[#a855f7] hover:text-white transition-all duration-300 shadow-[0_0_10px_rgba(168,85,247,0.15)]"
+                disabled={loading}
+                className="px-8 py-3 border border-[#a855f7]/70 rounded-lg text-[#c084fc] font-medium text-sm bg-[#121216] hover:bg-[#a855f7]/10 hover:border-[#a855f7] hover:text-white transition-all duration-300 shadow-[0_0_10px_rgba(168,85,247,0.15)] disabled:opacity-50"
               >
-                Enviar
+                {loading ? 'Enviando...' : 'Enviar'}
               </button>
             </div>
 
