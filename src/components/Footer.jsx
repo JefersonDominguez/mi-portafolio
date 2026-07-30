@@ -31,7 +31,7 @@ export default function Footer() {
     { name: 'Inicio', href: '#inicio' },
     { name: 'Sobre mí', href: '#sobre-mi' },
     { name: 'Proyectos', href: '#proyectos' },
-    { name: 'Habilidades', href: '#habilidades' },
+    { name: 'Habilidades', href: '#skills' },
     { name: 'Contacto', href: '#contacto' },
   ];
 
