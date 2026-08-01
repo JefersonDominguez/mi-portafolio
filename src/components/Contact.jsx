@@ -168,8 +168,6 @@ export default function Contact() {
                 className="w-full bg-[#1c1c22] border border-gray-700/60 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-[#a855f7] transition-colors resize-none"
               ></textarea>
             </div>
-
-            {/* MENSAJE DE ESTADO (ÉXITO / ERROR) */}
             {statusMessage.text && (
               <div
                 className={`p-4 rounded-lg text-sm font-semibold text-center transition-all ${
@@ -182,7 +180,6 @@ export default function Contact() {
               </div>
             )}
 
-            {/* BOTÓN ENVIAR */}
             <div>
               <button
                 type="submit"
