@@ -27,7 +27,7 @@ export default function Contact() {
     setLoading(true);
     setStatusMessage({ type: '', text: '' });
 
-    // Tus credenciales configuradas
+    // credenciales configuradas para el envio de correos electrónicos a través de EmailJS
     const SERVICE_ID = 'service_tpfcts6';
     const TEMPLATE_ID = 'template_ep2rq5e';
     const PUBLIC_KEY = 'zsuKekdRQQWUWM_BN';
@@ -62,15 +62,12 @@ export default function Contact() {
   return (
     <section id="contacto" className="w-full bg-[#050508] text-white py-20 px-6 md:px-16 lg:px-28">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-start">
-        
-        {/* COLUMNA IZQUIERDA: INFORMACIÓN DE CONTACTO */}
         <div className="space-y-8 pt-4">
           <h2 className="text-3xl md:text-4xl font-extrabold text-[#a855f7] tracking-tight">
             Contacto
           </h2>
 
           <div className="space-y-6">
-            {/* DIRECCIÓN */}
             <div className="flex items-start gap-4">
               <div className="p-1 text-[#a855f7] mt-1">
                 <FiMapPin className="w-6 h-6" />
@@ -82,8 +79,6 @@ export default function Contact() {
                 </p>
               </div>
             </div>
-
-            {/* EMAIL */}
             <div className="flex items-start gap-4">
               <div className="p-1 text-[#a855f7] mt-1">
                 <FiMail className="w-6 h-6" />
