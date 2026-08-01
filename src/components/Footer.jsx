@@ -38,19 +38,13 @@ export default function Footer() {
   return (
     <footer className="bg-[#0e0e11] text-white py-12 px-4 border-t border-zinc-900 mt-16">
       <div className="max-w-4xl mx-auto flex flex-col items-center text-center">
-        
-        {/* Logo / Título */}
         <a href="#inicio" className="text-2xl font-bold tracking-wide mb-6 group inline-block">
           <span className="border-b-2 border-[#a855f7] pb-1">Portafolio</span>
           <span className="text-[#a855f7]">.</span>
         </a>
-
-        {/* Subtítulo redes sociales */}
         <p className="text-zinc-300 font-medium text-sm mb-4">
           Encuentrame tambien en:
         </p>
-
-        {/* Iconos de redes sociales */}
         <div className="flex space-x-3 mb-8">
           {socialLinks.map((social, index) => {
             const Icon = social.icon;
@@ -59,9 +53,7 @@ export default function Footer() {
                 key={index}
                 href={social.href}
                 aria-label={social.label}
-                // target="_blank" abre en una nueva pestaña
                 target="_blank" 
-                // rel="noopener noreferrer" es por seguridad al usar target="_blank"
                 rel="noopener noreferrer" 
                 className="w-10 h-10 rounded-full bg-[#18181b] flex items-center justify-center text-[#a855f7] hover:bg-[#a855f7] hover:text-white transition-all duration-300 border border-zinc-800/60"
               >
@@ -70,8 +62,6 @@ export default function Footer() {
             );
           })}
         </div>
-
-        {/* Links de navegación interna */}
         <nav className="flex flex-wrap justify-center gap-6 mb-8 text-sm text-zinc-300">
           {navLinks.map((link, index) => (
             <a
@@ -83,11 +73,7 @@ export default function Footer() {
             </a>
           ))}
         </nav>
-
-        {/* Línea divisora */}
         <div className="w-full max-w-xl border-t border-zinc-800/70 mb-6"></div>
-
-        {/* Sección Copyright */}
         <p className="text-xs text-zinc-400">
           © {currentYear} Portfolio. Todos los derechos reservados. Diseñado por{' '}
           <span className="text-[#a855f7] font-medium">Jeferson Dominguez Flores</span>
