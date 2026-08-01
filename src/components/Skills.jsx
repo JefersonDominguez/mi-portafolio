@@ -27,7 +27,6 @@ const skills = [
   { name: 'Express', icon: FaCode },
   { name: 'MySQL', icon: FaDatabase },
 ];
-
 export default function Skills() {
   return (
     <section id="skills" className="bg-[#0e0e11] py-16 px-4 flex justify-center items-center min-h-screen scroll-mt-20">
