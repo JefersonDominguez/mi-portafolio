@@ -32,7 +32,7 @@ export default function About() {
               Soy un desarrollador web apasionado por crear experiencias digitales atractivas y funcionales. Mi enfoque combina diseño estético con código limpio y eficiente.
             </p>
             <p>
-              Con experiencia en la creación de aplicaciones web modernas, me me me especializo en transformar ideas en soluciones digitales que resuelven problemas reales.
+              Con experiencia en la creación de aplicaciones web modernas, me especializo en transformar ideas en soluciones digitales que resuelven problemas reales.
             </p>
           </div>
           <div className="flex flex-wrap gap-2.5 pt-2">
