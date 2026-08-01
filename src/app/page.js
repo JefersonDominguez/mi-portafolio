@@ -4,7 +4,7 @@ import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
 import Navbar from '@/components/Navbar';
 import Skills from '@/components/Skills';
-import Footer from '@/components/Footer'; // <- Cambiado a Mayúscula
+import Footer from '@/components/Footer'; 
 import './globals.css';
 
 export default function Home() {
@@ -16,7 +16,7 @@ export default function Home() {
       <Projects />
       <Skills />
       <Contact />
-      <Footer /> {/* <- Cambiado a Mayúscula */}
+      <Footer /> 
     </main>
   );
 }
