@@ -98,8 +98,6 @@ export default function Contact() {
                 </a>
               </div>
             </div>
-
-            {/* TELÉFONO */}
             <div className="flex items-start gap-4">
               <div className="p-1 text-[#a855f7] mt-1">
                 <FiPhone className="w-6 h-6" />
@@ -117,11 +115,9 @@ export default function Contact() {
           </div>
         </div>
 
-        {/* COLUMNA DERECHA: TARJETA DEL FORMULARIO */}
         <div className="bg-[#121216] border border-gray-800/80 rounded-2xl p-8 md:p-10 shadow-xl">
           <form onSubmit={handleSubmit} className="space-y-6">
             
-            {/* CAMPO NOMBRE */}
             <div className="space-y-2">
               <label htmlFor="nombre" className="block text-sm font-medium text-gray-200">
                 Nombre
@@ -136,8 +132,6 @@ export default function Contact() {
                 className="w-full bg-[#1c1c22] border border-gray-700/60 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-[#a855f7] transition-colors"
               />
             </div>
-
-            {/* CAMPO EMAIL */}
             <div className="space-y-2">
               <label htmlFor="email" className="block text-sm font-medium text-gray-200">
                 Email
@@ -152,8 +146,6 @@ export default function Contact() {
                 className="w-full bg-[#1c1c22] border border-gray-700/60 rounded-lg px-4 py-3 text-white text-sm focus:outline-none focus:border-[#a855f7] transition-colors"
               />
             </div>
-
-            {/* CAMPO MENSAJE */}
             <div className="space-y-2">
               <label htmlFor="mensaje" className="block text-sm font-medium text-gray-200">
                 Mensaje
